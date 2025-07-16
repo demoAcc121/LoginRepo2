@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LoginPage from "./LoginPage";
 const Show = () => {
@@ -30,6 +30,9 @@ const Show = () => {
     alert("Logout Successful");
     navigate("/");
   };
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -52,11 +55,11 @@ const Show = () => {
             Name: {userData.firstName} {userData.lastName}
           </p>
           <p>Email: {userData.email}</p>
-          <p>Token: {userData.accessToken}</p>
+          <p>Token: {localStorage.getItem("token")}</p>
           <p>Gender:{userData.gender}</p>
+          <img src={userData.image} alt="User profile" />
         </div>
       )}
-      <img src={userData.image}></img>
     </>
   );
 };
