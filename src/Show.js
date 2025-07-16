@@ -37,9 +37,6 @@ const Show = () => {
     <>
       <div className="flex items-center justify-center space-x-4">
         <p className="px-3">Profile Show</p>
-        <button className="px-6 py-1 text-white bg-blue-600" onClick={getData}>
-          Get Details
-        </button>
         <button
           onClick={handleLogout}
           className="px-6 py-1 text-white bg-red-600"

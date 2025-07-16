@@ -22,7 +22,7 @@ const LoginPage = () => {
         navigate("/profile");
       })
       .catch((error) => {
-        alert("failed in login");
+        alert("Use-> emilys / emilyspass");
         // console.log("login Failed", error);
       });
   };
