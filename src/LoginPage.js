@@ -17,6 +17,7 @@ const LoginPage = () => {
       .post("https://dummyjson.com/auth/login", Data)
       .then((res) => {
         localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("refreshToken", res.data.refreshToken);
         alert("Login Successfull");
         // console.log("login Succussfully", res.data);
         navigate("/profile");
