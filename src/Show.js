@@ -22,7 +22,6 @@ const Show = () => {
         console.log(error);
       });
   };
-
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUserData(null);
@@ -52,7 +51,8 @@ const Show = () => {
           </p>
           <p>Email: {userData.email}</p>
           <p>Token: {localStorage.getItem("token")}</p>
-          <p>Gender:{userData.gender}</p>
+          <p>Gender: {userData.gender}</p>
+          <p>RefreshToken: {localStorage.getItem("refreshToken")}</p>
           <img src={userData.image} alt="User profile" />
         </div>
       )}
